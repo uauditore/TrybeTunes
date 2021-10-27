@@ -37,14 +37,25 @@ class Album extends React.Component {
     return (
       <div data-testid="page-album">
         <Header />
-        <h3 data-testid="artist-name">
+
+        <h3
+          data-testid="artist-name"
+        >
           {artistName}
+
         </h3>
-        <p data-testid="album-name">
+        <p
+          data-testid="album-name"
+        >
           {`${collectionName} by ${artistName}`}
+
         </p>
         {songs.map((track) => (
-          <MusicCard key={ track.trackId } song={ track } />
+          <MusicCard
+            key={ track.trackId }
+            song={ track }
+
+          />
         ))}
       </div>
     );
@@ -57,5 +68,6 @@ Album.propTypes = {
       id: PropTypes.string,
     }),
   }).isRequired,
+
 };
 export default Album;

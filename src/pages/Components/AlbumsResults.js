@@ -12,8 +12,8 @@ class AlbumsResult extends React.Component {
         ) : (
           <div>
             <p>
-              resultado de álbuns de:
-              { `${artist}`}
+              Resultado de álbuns de:
+              {` ${artist}`}
             </p>
             <div>
               {albums.map(
@@ -44,7 +44,7 @@ class AlbumsResult extends React.Component {
 }
 
 AlbumsResult.propTypes = {
-  albums: PropTypes.arrayOf(PropTypes.object),
+  albums: PropTypes.arrayOf(PropTypes.object).isRequired,
   artist: PropTypes.string.isRequired,
-}.isRequired;
+};
 export default AlbumsResult;

@@ -23,10 +23,11 @@ class Search extends React.Component {
   handleInputChange({ target }) {
     const { value } = target;
     const minCharacters = 2;
-    if (value.lenght >= minCharacters) {
+    if (value.length >= minCharacters) {
       this.setState({
         artistName: value,
         disableSearchBtn: false,
+
       });
     } else {
       this.setState({
@@ -53,7 +54,7 @@ class Search extends React.Component {
   render() {
     const { disableSearchBtn, loading, hasBeenSearched, result, artistName } = this.state;
     return (
-      <div dat-testid="page-search">
+      <div data-testid="page-search">
         <Header />
         {loading ? (
           <Loading />
@@ -73,6 +74,7 @@ class Search extends React.Component {
                 onClick={ this.onClickBtn }
               >
                 Pesquisar
+
               </button>
             </form>
             {hasBeenSearched ? (
