@@ -18,10 +18,9 @@ class Login extends React.Component {
     this.handleBtnClick = this.handleBtnClick.bind(this);
   }
 
-  async handleBtnClick(event) {
-    event.preventDefault();
+  async handleBtnClick() {
     this.setState({
-      loading: false,
+      loading: true,
     });
     const { name } = this.state;
     createUser({ name })
@@ -35,7 +34,7 @@ class Login extends React.Component {
     const { value } = target;
     const minCharacters = 3;
 
-    if (value.lenght >= minCharacters) {
+    if (value.length >= minCharacters) {
       this.setState({
         name: value,
         disableButton: false,

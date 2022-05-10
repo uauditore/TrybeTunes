@@ -37,9 +37,8 @@ class Search extends React.Component {
     }
   }
 
-  onClickBtn(event) {
+  onClickBtn() {
     const { artistName } = this.state;
-    event.preventDefault();
     this.setState({
       loading: true,
     });
